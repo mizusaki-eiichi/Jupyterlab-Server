@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  jupyterlab_server:
+    build: ..
+    container_name: jupyterlab_server
+    image: jupyterlab_server
+    ports:
+      - 28888:8888
+    volumes:
+      - ../src:/opt/src
+      - ../data:/opt/data
+    tty: true
